@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/DisplayBooks.css';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 
 function DisplayBooks({ author, title, category }) {
   return (

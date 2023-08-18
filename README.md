@@ -30,7 +30,7 @@
 
 # 📖 [BookStore] <a name="about-project"></a>
 
-BookStore
+BookStore is a SPA which allows you to add books,edit and remove books
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -101,7 +101,7 @@ npx stylelint "*/.{css,scss}"
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page].
+Feel free to check the [issues](https://github.com/Lawmsangi/bookstore-react/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

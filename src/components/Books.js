@@ -1,26 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import DisplayBooks from './DisplayBooks';
 import AddBook from './AddBook';
 
 export default function Books() {
-  const [books] = useState([
-    {
-      title: 'Atomic Habits',
-      author: 'James Clear',
-      category: 'SelfHelp',
-    },
-    {
-      title: 'This Girl',
-      author: 'Colleen Hoover',
-      category: 'Fiction',
-    },
-  ]);
+  const { books } = useSelector((store) => store.books);
+
   return (
     <div>
       <div>
         {books.map((book) => (
           <DisplayBooks
             key={book.author}
+            id={book.item_id}
             title={book.title}
             author={book.author}
             category={book.category}

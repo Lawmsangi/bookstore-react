@@ -1,8 +1,15 @@
 import React from 'react';
 import '../css/DisplayBooks.css';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import Button from './Button';
+import { removeBook } from '../redux/books/booksSlice';
 
-function DisplayBooks({ author, title, category }) {
+function DisplayBooks({
+  id, author, title, category,
+}) {
+  const dispatch = useDispatch();
+
   return (
     <div className="book-card">
       <div className="card-details">
@@ -11,13 +18,23 @@ function DisplayBooks({ author, title, category }) {
         <h3>{author}</h3>
         <ul>
           <li>
-            <button className="card-button" type="button">Comments</button>
+            <Button
+              className="card-button"
+              text="Comments"
+            />
           </li>
           <li>
-            <button className="card-button" type="button">Remove</button>
+            <Button
+              className="card-button"
+              onClick={() => dispatch(removeBook(id))}
+              text="Remove"
+            />
           </li>
           <li>
-            <button className="card-button" type="button">Edit</button>
+            <Button
+              className="card-button"
+              text="Edit"
+            />
           </li>
         </ul>
       </div>
@@ -43,6 +60,7 @@ DisplayBooks.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default DisplayBooks;

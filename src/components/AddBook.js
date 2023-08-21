@@ -1,15 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/AddBook.css';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import Button from './Button';
+import { addBook } from '../redux/books/booksSlice';
 
 export default function AddBook() {
+  const dispatch = useDispatch();
+  const [author, setAuthor] = useState('');
+  const [title, setTitle] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!title || !author) return;
+    dispatch(addBook({
+      item_id: uuidv4(), title, author, category: 'Fiction',
+    }));
+    setTitle('');
+    setAuthor('');
+  };
+
   return (
     <div className="add-book">
       <div className="line" />
       <h1 className="title">ADD NEW BOOK</h1>
       <form action="">
-        <input className="book-title" type="text" placeholder="Book title" />
-        <input className="book-author" type="text" placeholder="Author" />
-        <button type="button" className="button-add">ADD BOOK</button>
+        <input
+          className="book-title"
+          type="text"
+          placeholder="Book title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className="book-author"
+          type="text"
+          placeholder="Author"
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <Button onClick={handleSubmit} text="ADD BOOK" />
       </form>
     </div>
   );

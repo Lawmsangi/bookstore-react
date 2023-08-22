@@ -3,13 +3,12 @@ import '../css/DisplayBooks.css';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import Button from './Button';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBooks } from '../redux/books/booksSlice';
 
 function DisplayBooks({
-  id, author, title, category,
+  itemId, author, title, category,
 }) {
   const dispatch = useDispatch();
-
   return (
     <div className="book-card">
       <div className="card-details">
@@ -26,7 +25,7 @@ function DisplayBooks({
           <li>
             <Button
               className="card-button"
-              onClick={() => dispatch(removeBook(id))}
+              onClick={() => dispatch(deleteBooks(itemId))}
               text="Remove"
             />
           </li>
@@ -60,7 +59,7 @@ DisplayBooks.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
 };
 
 export default DisplayBooks;

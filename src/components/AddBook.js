@@ -23,7 +23,7 @@ export default function AddBook() {
 
   return (
     <div className="add-book">
-      <div className="line" />
+      <div className="line"> </div>
       <h1 className="title">ADD NEW BOOK</h1>
       <form action="">
         <input
@@ -40,7 +40,7 @@ export default function AddBook() {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <Button onClick={handleSubmit} text="ADD BOOK" />
+        <Button onClick={handleSubmit} buttonClass="button-add" text="ADD BOOK" />
       </form>
     </div>
   );

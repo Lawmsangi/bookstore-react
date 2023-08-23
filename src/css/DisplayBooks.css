@@ -1,10 +1,9 @@
-
 .book-card {
   display: flex;
   background-color: #fff;
   justify-content: space-between;
   border: 1px solid #e8e8e8;
-  height: 170px;
+  height: 150px;
   margin: 30px 80px 0;
   padding: 30px;
 }
@@ -12,14 +11,11 @@
 .card-details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   flex: 0.5;
+  gap: 5px;
 }
 
 .card-details h4 {
-  width: 3.063rem;
-  height: 1.125rem;
-  margin: 0 2.438rem 0 0;
   opacity: 0.5;
   font-family: Montserrat, sans-serif;
   font-weight: bold;
@@ -27,9 +23,6 @@
 }
 
 .card-details h2 {
-  width: 12.313rem;
-  height: 1.813rem;
-  margin: 0.188rem 20.188rem 0 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
@@ -38,9 +31,6 @@
 }
 
 .card-details h3 {
-  width: 6.688rem;
-  height: 1.188rem;
-  margin: 0.25rem 0 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
@@ -56,20 +46,103 @@ ul li {
 }
 
 .card-button {
-  width: auto;
-  height: 1.188rem;
-  margin: 10px 10px 0 0;
+  margin: 30px 10px 0 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   border: none;
   color: #4386bf;
+  background-color: #fff;
+}
+
+.line2 {
+  width: 0.2px;
+  height: 22px;
+  align-self: center;
+  border: 1px solid #e8e8e8;
+  background-color: #e8e8e8;
+  margin: 30px 10px 0 0;
 }
 
 .book-completed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 0.3;
+}
+
+.circle {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-style: solid;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  margin-right: 1.3rem;
+}
+
+.percent {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  margin: 0.438rem 4.938rem 0.75rem 0;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.line3 {
+  width: 0.5px;
+  height: 5.375rem;
+  align-self: center;
+  border: solid 1px #e8e8e8;
+  margin-right: 0;
+  background-color: #e8e8e8;
 }
 
 .book-progress {
   flex: 0.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5rem;
+}
+
+.book-progress h2 {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 3.625rem 0 3.688rem;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+}
+
+.book-progress h3 {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 3.688rem;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.book-progress button {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 1rem 0 0.563rem 3.688rem;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
 }

@@ -18,20 +18,22 @@ function DisplayBooks({
         <ul>
           <li>
             <Button
-              className="card-button"
+              buttonClass="card-button"
               text="Comments"
             />
           </li>
+          <div className="line2" />
           <li>
             <Button
-              className="card-button"
+              buttonClass="card-button"
               onClick={() => dispatch(deleteBooks(itemId))}
               text="Remove"
             />
           </li>
+          <div className="line2" />
           <li>
             <Button
-              className="card-button"
+              buttonClass="card-button"
               text="Edit"
             />
           </li>
@@ -39,12 +41,14 @@ function DisplayBooks({
       </div>
 
       <div className="book-completed">
-        <div>cirle</div>
+        <div className="circle" />
         <div>
-          <div>64%</div>
-          <span>completed</span>
+          <div className="percent">64%</div>
+          <span className="completed">Completed</span>
         </div>
       </div>
+
+      <div className="line3" />
 
       <div className="book-progress">
         <h2>CURRENT CHAPTER</h2>

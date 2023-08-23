@@ -6,7 +6,7 @@ import Button from './Button';
 import { deleteBooks } from '../redux/books/booksSlice';
 
 function DisplayBooks({
-  itemId, author, title, category
+  itemId, author, title, category,
 }) {
   const dispatch = useDispatch();
   return (
@@ -22,7 +22,7 @@ function DisplayBooks({
               text="Comments"
             />
           </li>
-          <div className='line2'></div>
+          <div className="line2" />
           <li>
             <Button
               buttonClass="card-button"
@@ -30,7 +30,7 @@ function DisplayBooks({
               text="Remove"
             />
           </li>
-          <div className='line2'></div>
+          <div className="line2" />
           <li>
             <Button
               buttonClass="card-button"
@@ -41,14 +41,14 @@ function DisplayBooks({
       </div>
 
       <div className="book-completed">
-        <div className='circle'></div>
+        <div className="circle" />
         <div>
-          <div className='percent'>64%</div>
-          <span className='completed'>Completed</span>
+          <div className="percent">64%</div>
+          <span className="completed">Completed</span>
         </div>
       </div>
 
-      <div className="line3"></div>
+      <div className="line3" />
 
       <div className="book-progress">
         <h2>CURRENT CHAPTER</h2>

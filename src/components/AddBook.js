@@ -40,7 +40,7 @@ export default function AddBook() {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <Button onClick={handleSubmit}  buttonClass="button-add" text="ADD BOOK" />
+        <Button onClick={handleSubmit} buttonClass="button-add" text="ADD BOOK" />
       </form>
     </div>
   );

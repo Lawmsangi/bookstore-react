@@ -1,23 +1,18 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 10vh;
-  margin: 0 0 20px;
   padding: 20px;
   background-color: #fff;
 }
 
 .header h1 {
-  margin: 0.375rem 2.938rem 0.125rem 0;
+  margin: 0.375rem 2.938rem 0.125rem 4rem;
   font-family: Montserrat, sans-serif;
   font-size: 1.875rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #0290ff;
+  width: 15rem;
 }
 
 .links {
@@ -41,6 +36,7 @@
   border-radius: 50%;
   border: 1px solid #e8e8e8;
   background-color: #fff;
+  margin: 0 0 0 -5rem;
 }
 
 .material-icons {

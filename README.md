@@ -51,7 +51,7 @@ BookStore is a SPA which allows you to add books,edit and remove books
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](Coming soon)
+- [Live Demo Link] (https://bookstore-n1fd.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
